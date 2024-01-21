@@ -10,6 +10,8 @@ $stmt_2->execute();
 <html>
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <link rel="stylesheet" href="updateDd.scss">
     <title>User Registration</title>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -17,10 +19,9 @@ $stmt_2->execute();
 
 
 
+
 <body>
-    <div class="col d-flex justify-content-center">
-        <h1>Update Customer</h1>
-    </div>
+
     <br>
     <?php
     require 'connect.php';
@@ -50,10 +51,14 @@ $stmt_2->execute();
             <div class="row mb-4">
                 <div class="border" style="width: 400px">
                     <form action=" update_real.php" method="POST">
-                        <div class="table table-striped table-hover table-responsive table-bordered">
-                            <label class="form-label">CustomerID</label>
-                            <br>
+
+                        <div class="col d-flex justify-content-center">
+
+                            <h1>Update Customer</h1>
                         </div>
+                        <div class="table table-striped table-hover table-responsive table-bordered">
+                        </div>
+                        <label class="form-label">CustomerID</label>
                         <input type="text" for="form1Example2" class="form-control" placeholder="Enter Customer ID" name="CustomerID" width="10px" value=<?= $result['CustomerID']; ?>>
                         <br>
                         <label class="form-label">Name</label>
@@ -88,10 +93,39 @@ $stmt_2->execute();
     <br> <br>
 
     <div class="col d-flex justify-content-center">
-
-        <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block" style="width:60px"> ok </button>
+        <div class="buttonc">
+            <button data-mdb-ripple-init type="submit" class="btn btn-outline-dark"> ok </button>
+        </div>
         </form>
     </div>
+    <!-- <div class="container">
+        <input type="checkbox" id="check" onclick="myFunction()">
+        <label for="check" class="button"> </label>
+    </div> -->
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+    <script>
+        const options = {
+            bottom: '64px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '32px', // default: 'unset'
+            time: '0.5s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: '#fff', // default: '#fff'
+            buttonColorDark: '#100f2c', // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: false, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+    </script>
     </ </body>
 
 </html>
