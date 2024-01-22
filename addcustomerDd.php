@@ -10,6 +10,7 @@
  <html>
 
  <head>
+
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
      <div class="col d-flex justify-content-center">
          <title>User Registration11</title>
@@ -17,49 +18,65 @@
  </head>
 
  <body>
-     <div class="col d-flex justify-content-center">
-         <h1>add Customer with Dropdown Menu</h1>
-     </div>
-     <div class="col d-flex justify-content-center">
+     <style>
+         .center {
+
+             margin: auto;
+             text-align: center;
+         }
+     </style>
+     <div class="form-outline mb-4">
          <div class="form-outline mb-4">
-             <div class="row mb-4">
-                 <div class="border" style="width: 400px">
 
-                     <br>
-                     <label class="form-label">CustomerID</label>
-                     <form action="addcustomerDd.php" method="POST">
-                         <br>
-                         <input type="text" placeholder="Enter Customer ID" name="customerID">
-                         <br> <br>
-                         <input type="text" placeholder="Name" name="Name">
-                         <br> <br>
-                         <input type="number" placeholder="OutStandingDebt" name="outstandingDebt">
-                         <br> <br>
-                         <input type="email" placeholder="Email" name="email">
-                         <br> <br>
-                         <input type="date" placeholder="Birthdate" name="birthdate">
-                         <br> <br>
-                         <label> กรุณาใส่รหัสประเทศ </label>
-                         <select name="countrycode">
-                             <?php while ($cc = $stmt_2->fetch(PDO::FETCH_ASSOC)) :
-                                ?>
-                                 <option value="<?php echo $cc['CountryCode'] ?>">
-                                     <?php echo $cc['CountryName'] ?>
-                                 </option>
-                             <?php
-                                endwhile;
-                                ?>
-                         </select>
-                         <br> <br>
-                         <div class="col d-flex justify-content-center">
-
-                             <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block" style="width:60px"> ok </button>
-                     </form>
-                 </div>
+             <div class="col d-flex justify-content-center">
+                 <h1>add Customer with Dropdown Menu</h1>
              </div>
-         </div>
-     </div>
 
+             <div class="col d-flex justify-content-center">
+                 <div class="shadow p-3 mb-5 bg-body rounded" style="width: 500px" style="height: 400">
+                     <div class="form-outline mb-4">
+                         <div class="row mb-4">
+                             <div class="border" style="width: 800px" style="height: 400">
+                                 <form action=" update_real.php" method="POST">
+
+                                     <div class="col d-flex justify-content-center">
+                                         <div class="center">
+                                             <br>
+                                             <label class="form-label">CustomerID</label>
+                                             <form action="addcustomerDd.php" method="POST">
+                                                 <br>
+                                                 <input type="text" class="form-control" placeholder="Enter Customer ID" name="customerID">
+                                                 <br> <br>
+                                                 <input type="text" class="form-control" placeholder="Name" name="Name">
+                                                 <br> <br>
+                                                 <input type="number" class="form-control" placeholder="OutStandingDebt" name="outstandingDebt">
+                                                 <br> <br>
+                                                 <input type="email" class="form-control" placeholder="Email" name="email">
+                                                 <br> <br>
+                                                 <input type="date" class="form-control" placeholder="Birthdate" name="birthdate">
+                                                 <br> <br>
+                                                 <label> กรุณาใส่รหัสประเทศ </label>
+                                                 <select class="form-control" name="countrycode">
+                                                     <?php while ($cc = $stmt_2->fetch(PDO::FETCH_ASSOC)) :
+                                                        ?>
+                                                         <option value="<?php echo $cc['CountryCode'] ?>">
+                                                             <?php echo $cc['CountryName'] ?>
+                                                         </option>
+                                                     <?php
+                                                        endwhile;
+                                                        ?>
+                                                 </select>
+                                                 <br> <br>
+                                                 <div class="col d-flex justify-content-center">
+
+                                                     <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block" style="width:60px"> ok </button>
+                                                 </div>
+                                             </form>
+                                         </div>
+                                     </div>
+                             </div>
+                         </div>
+                     </div>
  </body>
 
  </html>

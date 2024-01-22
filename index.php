@@ -32,19 +32,19 @@
                                 <caption>List of users</caption>
 
 
-                                <article>
 
-                                    <tr>
-                                        <th width="10%">รหัสลูกค้า</th>
-                                        <th width="20%">ชื่อ-นามสกุล</th>
-                                        <th width="20%">วันเดือนปีเกิด</th>
-                                        <th width="25%">อีเมล์</th>
-                                        <th width="10%">ประเทศ</th>
-                                        <th width="10%">ยอดหนี้</th>
-                                        <th width="5%">แก้ไข</th>
-                                        <th width="5%">ลบ</th>
-                                    </tr>
-                                </article>
+
+                                <tr>
+                                    <th width="10%">รหัสลูกค้า</th>
+                                    <th width="20%">ชื่อ-นามสกุล</th>
+                                    <th width="20%">วันเดือนปีเกิด</th>
+                                    <th width="25%">อีเมล์</th>
+                                    <th width="10%">ประเทศ</th>
+                                    <th width="10%">ยอดหนี้</th>
+                                    <th width="5%">แก้ไข</th>
+                                    <th width="5%">ลบ</th>
+                                </tr>
+
 
 
                             </thead>

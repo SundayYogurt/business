@@ -47,35 +47,37 @@ $stmt_2->execute();
 
 
     <div class="col d-flex justify-content-center">
-        <div class="form-outline mb-4">
-            <div class="row mb-4">
-                <div class="border" style="width: 400px">
-                    <form action=" update_real.php" method="POST">
+        <div class="shadow p-3 mb-5 bg-body rounded">
+            <div class="form-outline mb-4">
+                <div class="row mb-4">
+                    <div class="border" style="width: 500px" style="height: 400">
+                        <form action=" update_real.php" method="POST">
 
-                        <div class="col d-flex justify-content-center">
+                            <div class="col d-flex justify-content-center">
 
-                            <h1>Update Customer</h1>
-                        </div>
-                        <div class="table table-striped table-hover table-responsive table-bordered">
-                        </div>
-                        <label class="form-label">CustomerID</label>
-                        <input type="text" for="form1Example2" class="form-control" placeholder="Enter Customer ID" name="CustomerID" width="10px" value=<?= $result['CustomerID']; ?>>
-                        <br>
-                        <label class="form-label">Name</label>
-                        <input type="text" for="form1Example2" class="form-control" placeholder="Name" name="Name" required value=<?= $result['Name'] ?>>
-                        <br>
-                        <label class="form-label">OutstandingDebt</label>
-                        <input type="number" for="form1Example2" class="form-control" placeholder="OutStandingDebt" name="outstandingDebt" value=<?= $result['OutstandingDebt'] ?>>
-                        <br>
-                        <label class="form-label">Email</label>
-                        <input type="email" for="form1Example2" class="form-control" placeholder="Email" name="email" value=<?= $result['Email'] ?>>
-                        <br>
-                        <label class="form-label">BirthDate</label>
-                        <input type="date" for="form1Example2" class="form-control" placeholder="Birthdate" name="birthdate" value=<?= $result['Birthdate'] ?>>
-                        <br>
-                        <label> กรุณาใส่รหัสประเทศ </label>
-                        <select name="countrycode">
+                                <h1>Update Customer</h1>
+                            </div>
+                            <div class="table table-striped table-hover table-responsive table-bordered">
+                            </div>
+                            <label class="form-label">CustomerID</label>
+                            <input type="text" for="form1Example2" class="form-control" placeholder="Enter Customer ID" name="CustomerID" width="10px" value=<?= $result['CustomerID']; ?>>
+                            <br>
+                            <label class="form-label">Name</label>
+                            <input type="text" for="form1Example2" class="form-control" placeholder="Name" name="Name" required value=<?= $result['Name'] ?>>
+                            <br>
+                            <label class="form-label">OutstandingDebt</label>
+                            <input type="number" for="form1Example2" class="form-control" placeholder="OutStandingDebt" name="outstandingDebt" value=<?= $result['OutstandingDebt'] ?>>
+                            <br>
+                            <label class="form-label">Email</label>
+                            <input type="email" for="form1Example2" class="form-control" placeholder="Email" name="email" value=<?= $result['Email'] ?>>
+                            <br>
+                            <label class="form-label">BirthDate</label>
+                            <input type="date" for="form1Example2" class="form-control" placeholder="Birthdate" name="birthdate" value=<?= $result['Birthdate'] ?>>
+                            <br>
+                            <label> กรุณาใส่รหัสประเทศ </label>
+                            <select class="form-control" name="countrycode">
 
+                    </div>
                 </div>
             </div>
         </div>

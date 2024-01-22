@@ -23,7 +23,7 @@
 
 article {
     /* add the animation, but pause it by default */
-    animation: spin 2.5s infinite linear;
+    animation: spin 3.5s infinite linear;
 
     /**
    * Using `background-origin` we can create a “border” using two gradients. And to
@@ -43,7 +43,7 @@ article {
     /* extends to outer border edges */
 
     /* a clear border lets the background gradient shine through */
-    border: 3px solid transparent;
+    border: 30px solid transparent;
 
     /* unpause the animation on hover */
     &:hover {
