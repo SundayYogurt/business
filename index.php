@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <link rel="stylesheet" href="updateDd.scss">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +11,7 @@
     <title>CRUD Customer Information</title>
 </head>
 
-<body> 
+<body>
     <div class="container">
         <div class="row">
             <div class="col-md-12"> <br>
@@ -42,8 +44,8 @@
                                 <td><?= $r['Email'] ?></td>
                                 <td><?= $r['CountryCode'] ?></td>
                                 <td><?= $r['OutstandingDebt'] ?></td>
-                                <td><a href="updateDd.php?CustomerID=<?=$r['CustomerID'] ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
-                                <td><a href="CustomerDelete.php?CustomerID=<?= $r["CustomerID"]?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยันการลบข้อมูล !!');">ลบ</a></td>
+                                <td><a href="updateDd.php?CustomerID=<?= $r['CustomerID'] ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
+                                <td><a href="CustomerDelete.php?CustomerID=<?= $r["CustomerID"] ?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยันการลบข้อมูล !!');">ลบ</a></td>
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -51,6 +53,30 @@
             </div>
         </div>
     </div>
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+    <script>
+        const options = {
+            bottom: '64px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '32px', // default: 'unset'
+            time: '0.5s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: '#fff', // default: '#fff'
+            buttonColorDark: '#100f2c', // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: false, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: false // default: true
+        }
+
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+    </script>
 </body>
 
 </html>
