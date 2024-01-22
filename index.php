@@ -4,6 +4,7 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <link rel="stylesheet" href="updateDd.scss">
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,46 +13,71 @@
 </head>
 
 <body>
+
+    <div class="block">
+        <main>
+
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12"> <br>
                 <h3>รายชื่อลูกค้า <a href="addCustomerDd.php" class="btn btn-info float-end">+เพิ่มข้อมูล</a> </h3>
-                <table class="table table-striped  table-hover table-responsive table-bordered">
-                    <thead align="center">
-                        <tr>
-                            <th width="10%">รหัสลูกค้า</th>
-                            <th width="20%">ชื่อ-นามสกุล</th>
-                            <th width="20%">วันเดือนปีเกิด</th>
-                            <th width="25%">อีเมล์</th>
-                            <th width="10%">ประเทศ</th>
-                            <th width="10%">ยอดหนี้</th>
-                            <th width="5%">แก้ไข</th>
-                            <th width="5%">ลบ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        require 'connect.php';
-                        $sql =  "SELECT * FROM customer";
-                        $stmt = $conn->prepare($sql);
-                        $stmt->execute();
-                        $result = $stmt->fetchALL();
-                        foreach ($result as $r) { ?>
-                            <tr>
-                                <td><?= $r['CustomerID'] ?></td>
-                                <td><?= $r['Name'] ?></td>
-                                <td><?= $r['Birthdate'] ?></td>
-                                <td><?= $r['Email'] ?></td>
-                                <td><?= $r['CountryCode'] ?></td>
-                                <td><?= $r['OutstandingDebt'] ?></td>
-                                <td><a href="updateDd.php?CustomerID=<?= $r['CustomerID'] ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
-                                <td><a href="CustomerDelete.php?CustomerID=<?= $r["CustomerID"] ?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยันการลบข้อมูล !!');">ลบ</a></td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                <div class="shadow p-3 mb-5 bg-body rounded">
+                    <table class="table table-striped  table-hover table-responsive table-sm">
+
+                        <div class="border-c">
+
+                            <thead align="center">
+                                <caption>List of users</caption>
+
+
+                                <article>
+
+                                    <tr>
+                                        <th width="10%">รหัสลูกค้า</th>
+                                        <th width="20%">ชื่อ-นามสกุล</th>
+                                        <th width="20%">วันเดือนปีเกิด</th>
+                                        <th width="25%">อีเมล์</th>
+                                        <th width="10%">ประเทศ</th>
+                                        <th width="10%">ยอดหนี้</th>
+                                        <th width="5%">แก้ไข</th>
+                                        <th width="5%">ลบ</th>
+                                    </tr>
+                                </article>
+
+
+                            </thead>
+                            <tbody>
+
+                                <?php
+                                require 'connect.php';
+                                $sql =  "SELECT * FROM customer";
+                                $stmt = $conn->prepare($sql);
+                                $stmt->execute();
+                                $result = $stmt->fetchALL();
+                                foreach ($result as $r) { ?>
+
+                                    <tr>
+                                        <td><?= $r['CustomerID'] ?></td>
+                                        <td><?= $r['Name'] ?></td>
+                                        <td><?= $r['Birthdate'] ?></td>
+                                        <td><?= $r['Email'] ?></td>
+                                        <td><?= $r['CountryCode'] ?></td>
+                                        <td><?= $r['OutstandingDebt'] ?></td>
+                                        <td><a href="updateDd.php?CustomerID=<?= $r['CustomerID'] ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
+                                        <td><a href="CustomerDelete.php?CustomerID=<?= $r["CustomerID"] ?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยันการลบข้อมูล !!');">ลบ</a></td>
+                                    </tr>
+
+                                <?php } ?>
+
+                            </tbody>
+                    </table>
+
+                </div>
             </div>
         </div>
+    </div>
     </div>
     <script>
         function addDarkmodeWidget() {
@@ -77,6 +103,8 @@
         const darkmode = new Darkmode(options);
         darkmode.showWidget();
     </script>
+
+    </main>
 </body>
 
 </html>
